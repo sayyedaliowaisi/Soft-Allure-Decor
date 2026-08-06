@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+html{
+    scroll-behavior:smooth;
+}
+
+[x-cloak]{
+    display:none !important;
+}
+
+.menu-link{
+    position:relative;
+    font-weight:500;
+    transition:.3s;
+}
+
+.menu-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:#f59e0b;
+    transition:.3s;
+}
+
+.menu-link:hover{
+    color:#f59e0b;
+}
+
+.menu-link:hover::after{
+    width:100%;
+}
