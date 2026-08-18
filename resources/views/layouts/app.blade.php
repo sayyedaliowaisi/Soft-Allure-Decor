@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="bg-white">
+<body class="bg-white text-gray-900">
 
 @include('components.navbar')
 

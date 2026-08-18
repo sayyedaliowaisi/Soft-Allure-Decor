@@ -10,4 +10,14 @@
 
 <x-featured-products :products="$featuredProducts" />
 
+<x-why-us />
+
+<x-applications />
+
+<x-cta />
+
+<x-testimonials />
+
+<x-contact-section />
+
 @endsection
