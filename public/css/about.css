@@ -1,0 +1,2300 @@
+
+/* =====================================================
+   SOFT ALLURE DECOR - ABOUT PAGE
+   SECTION 01: HERO BANNER
+===================================================== */
+
+.sa-about-hero {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    min-height: 470px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    background: #24211e;
+}
+
+/* Background Image */
+
+.sa-about-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
+.sa-about-hero-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 55%;
+}
+
+/* Dark Overlay */
+
+.sa-about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+        90deg,
+        rgba(16, 15, 14, 0.70) 0%,
+        rgba(16, 15, 14, 0.54) 50%,
+        rgba(16, 15, 14, 0.65) 100%
+    );
+}
+
+/* Main Container */
+
+.sa-about-hero-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 90px 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content */
+
+.sa-about-hero-content {
+    width: 100%;
+    max-width: 850px;
+
+    text-align: center;
+}
+
+/* Eyebrow */
+
+.sa-about-hero-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+
+    color: #d5b47c;
+}
+
+/* Heading */
+
+.sa-about-hero-content h1 {
+    margin: 0;
+
+    font-family: var(--sa-font-heading, 'Playfair Display', serif);
+    font-size: clamp(40px, 5vw, 65px);
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: -1.5px;
+
+    color: #ffffff;
+}
+
+.sa-about-hero-content h1 em {
+    font-weight: 400;
+    color: #e5c89a;
+}
+
+/* Description */
+
+.sa-about-hero-content p {
+    margin: 22px auto 0;
+
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+
+    color: #f0ebe5;
+}
+
+/* Breadcrumb */
+
+.sa-about-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 28px;
+
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 12px;
+
+    color: #e0d8cf;
+}
+
+.sa-about-breadcrumb a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.sa-about-breadcrumb a:hover {
+    color: #d5b47c;
+}
+
+.sa-about-breadcrumb span[aria-hidden="true"] {
+    color: #d5b47c;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .sa-about-hero {
+        min-height: 400px;
+    }
+
+    .sa-about-hero-container {
+        padding: 75px 24px;
+    }
+
+    .sa-about-hero-content h1 {
+        font-size: 48px;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .sa-about-hero {
+        min-height: 370px;
+    }
+
+    .sa-about-hero-image img {
+        object-position: 55% center;
+    }
+
+    .sa-about-hero-overlay {
+        background: rgba(16, 15, 14, 0.62);
+    }
+
+    .sa-about-hero-container {
+        padding: 65px 20px;
+    }
+
+    .sa-about-hero-eyebrow {
+        margin-bottom: 14px;
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .sa-about-hero-content h1 {
+        font-size: clamp(34px, 9vw, 43px);
+        line-height: 1.25;
+        letter-spacing: -0.7px;
+    }
+
+    .sa-about-hero-content p {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .sa-about-breadcrumb {
+        margin-top: 23px;
+        font-size: 11px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sa-about-hero * {
+        scroll-behavior: auto;
+    }
+}
+
+
+
+/* =====================================================
+   ABOUT PAGE - SECTION 02
+   OUR STORY
+===================================================== */
+
+.sa-about-story {
+    width: 100%;
+    padding: 105px 24px;
+    background: #ffffff;
+}
+
+.sa-about-story-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 85px;
+}
+
+/* =====================================================
+   LEFT IMAGE
+===================================================== */
+
+.sa-about-story-image {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: 540px;
+    overflow: hidden;
+    background: #f2eee8;
+}
+
+.sa-about-story-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Image Label */
+
+.sa-about-story-image-label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 155px;
+    min-height: 105px;
+    padding: 20px;
+
+    background: #b58a49;
+    color: #ffffff;
+}
+
+.sa-about-story-image-label span {
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.sa-about-story-image-label strong {
+    margin-top: 6px;
+    font-family: var(--sa-font-heading, 'Playfair Display', serif);
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* =====================================================
+   RIGHT CONTENT
+===================================================== */
+
+.sa-about-story-content {
+    min-width: 0;
+}
+
+.sa-about-story-eyebrow {
+    display: block;
+    margin-bottom: 20px;
+
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #b58a49;
+}
+
+.sa-about-story-content h2 {
+    margin: 0;
+
+    font-family: var(--sa-font-heading, 'Playfair Display', serif);
+    font-size: clamp(32px, 3.5vw, 46px);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -1px;
+
+    color: #24211e;
+}
+
+.sa-about-story-content h2 em {
+    display: block;
+    font-weight: 400;
+    color: #b58a49;
+}
+
+.sa-about-story-line {
+    width: 55px;
+    height: 2px;
+    margin: 25px 0;
+    background: #b58a49;
+}
+
+.sa-about-story-content p {
+    margin: 0 0 18px;
+
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.95;
+
+    color: #716b65;
+}
+
+/* =====================================================
+   HIGHLIGHTS
+===================================================== */
+
+.sa-about-story-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px 18px;
+    margin-top: 27px;
+}
+
+.sa-about-story-highlight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 12px;
+    font-weight: 600;
+    color: #3c3834;
+}
+
+.sa-about-story-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    width: 23px;
+    height: 23px;
+
+    border: 1px solid #e6d6bf;
+    border-radius: 50%;
+
+    color: #b58a49;
+    font-size: 12px;
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.sa-about-story-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    margin-top: 35px;
+    padding: 14px 22px;
+
+    border: 1px solid #b58a49;
+
+    background: transparent;
+    color: #98713b;
+
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.sa-about-story-btn span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.sa-about-story-btn:hover {
+    background: #b58a49;
+    color: #ffffff;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .sa-about-story {
+        padding: 75px 24px;
+    }
+
+    .sa-about-story-container {
+        gap: 35px;
+    }
+
+    .sa-about-story-image {
+        height: 480px;
+    }
+
+    .sa-about-story-content h2 {
+        font-size: 34px;
+    }
+
+    .sa-about-story-content p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .sa-about-story-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .sa-about-story {
+        padding: 55px 18px 65px;
+    }
+
+    .sa-about-story-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .sa-about-story-image {
+        height: 390px;
+    }
+
+    .sa-about-story-image-label {
+        width: 125px;
+        min-height: 85px;
+        padding: 15px;
+    }
+
+    .sa-about-story-image-label strong {
+        font-size: 19px;
+    }
+
+    .sa-about-story-content h2 {
+        font-size: clamp(29px, 7vw, 37px);
+    }
+
+    .sa-about-story-content p {
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .sa-about-story-highlights {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .sa-about-story-btn {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .sa-about-story-image {
+        height: 330px;
+    }
+}
+
+
+
+/* =====================================================
+   ABOUT PAGE - SECTION 03
+   OUR MISSION & VISION
+===================================================== */
+
+.sa-about-purpose {
+    width: 100%;
+    padding: 95px 24px 105px;
+    background: #faf8f4;
+}
+
+.sa-about-purpose-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+
+.sa-about-purpose-header {
+    max-width: 680px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.sa-about-purpose-eyebrow {
+    display: block;
+    margin-bottom: 14px;
+
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #b58a49;
+}
+
+.sa-about-purpose-header h2 {
+    margin: 0;
+
+    font-family: var(--sa-font-heading, 'Playfair Display', serif);
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -1px;
+
+    color: #24211e;
+}
+
+.sa-about-purpose-header h2 em {
+    font-weight: 400;
+    color: #b58a49;
+}
+
+.sa-about-purpose-header p {
+    max-width: 560px;
+    margin: 20px auto 0;
+
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 14px;
+    line-height: 1.85;
+
+    color: #77716b;
+}
+
+/* =====================================================
+   TWO COLUMN GRID
+===================================================== */
+
+.sa-about-purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.sa-about-purpose-card {
+    position: relative;
+    min-width: 0;
+
+    padding: 45px 43px 40px;
+
+    background: #ffffff;
+    border: 1px solid #eee8df;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Gold Icon */
+
+.sa-about-purpose-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 66px;
+    height: 66px;
+
+    margin-bottom: 28px;
+
+    border: 1px solid #eadcc6;
+    border-radius: 50%;
+
+    background: #fcfaf6;
+    color: #b58a49;
+}
+
+.sa-about-purpose-icon svg {
+    width: 34px;
+    height: 34px;
+}
+
+/* Number Label */
+
+.sa-about-purpose-number {
+    display: block;
+    margin-bottom: 12px;
+
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: #b58a49;
+}
+
+/* Card Heading */
+
+.sa-about-purpose-card h3 {
+    margin: 0 0 18px;
+
+    font-family: var(--sa-font-heading, 'Playfair Display', serif);
+    font-size: 30px;
+    font-weight: 400;
+
+    color: #292520;
+}
+
+/* Description */
+
+.sa-about-purpose-card p {
+    margin: 0;
+
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 14px;
+    line-height: 1.95;
+
+    color: #77716b;
+}
+
+/* Bottom Accent */
+
+.sa-about-purpose-rule {
+    width: 45px;
+    height: 2px;
+
+    margin-top: 32px;
+    margin-bottom: 18px;
+
+    background: #b58a49;
+}
+
+.sa-about-purpose-tagline {
+    font-family: var(--sa-font-body, 'DM Sans', sans-serif);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    color: #4c443b;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .sa-about-purpose {
+        padding: 75px 24px 85px;
+    }
+
+    .sa-about-purpose-grid {
+        gap: 20px;
+    }
+
+    .sa-about-purpose-card {
+        padding: 35px 28px;
+    }
+
+    .sa-about-purpose-card h3 {
+        font-size: 27px;
+    }
+
+    .sa-about-purpose-card p {
+        font-size: 13px;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .sa-about-purpose {
+        padding: 60px 18px 70px;
+    }
+
+    .sa-about-purpose-header {
+        margin-bottom: 35px;
+    }
+
+    .sa-about-purpose-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .sa-about-purpose-header h2 {
+        font-size: 34px;
+    }
+
+    .sa-about-purpose-header p {
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .sa-about-purpose-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sa-about-purpose-card {
+        padding: 35px 27px;
+    }
+
+    .sa-about-purpose-icon {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 25px;
+    }
+
+    .sa-about-purpose-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .sa-about-purpose-card h3 {
+        font-size: 28px;
+    }
+
+    .sa-about-purpose-card p {
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .sa-about-purpose-rule {
+        margin-top: 27px;
+    }
+}
+
+
+
+/* =====================================================
+   ABOUT PAGE - SECTION 04
+   WHAT WE OFFER
+===================================================== */
+
+.sa-about-offerings {
+    width: 100%;
+    padding: 100px 24px 105px;
+    background: #ffffff;
+}
+
+.sa-about-offerings-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Header */
+
+.sa-about-offerings-header {
+    max-width: 680px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.sa-about-offerings-eyebrow {
+    display: block;
+    margin-bottom: 14px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #b58a49;
+}
+
+.sa-about-offerings-header h2 {
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.25;
+    color: #24211e;
+}
+
+.sa-about-offerings-header h2 em {
+    font-weight: 400;
+    color: #b58a49;
+}
+
+.sa-about-offerings-header p {
+    max-width: 580px;
+    margin: 18px auto 0;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.85;
+    color: #77716b;
+}
+
+/* Cards Grid */
+
+.sa-about-offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Card */
+
+.sa-about-offering-card {
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #eee9e2;
+    overflow: hidden;
+}
+
+/* Image */
+
+.sa-about-offering-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 4.5;
+    overflow: hidden;
+    background: #f2eee8;
+}
+
+.sa-about-offering-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.sa-about-offering-card:hover
+.sa-about-offering-image img {
+    transform: scale(1.05);
+}
+
+/* Card Content */
+
+.sa-about-offering-content {
+    padding: 25px 22px 28px;
+}
+
+.sa-about-offering-number {
+    display: block;
+    margin-bottom: 12px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #b58a49;
+}
+
+.sa-about-offering-content h3 {
+    margin: 0 0 13px;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #292520;
+}
+
+.sa-about-offering-content p {
+    margin: 0 0 20px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    line-height: 1.85;
+    color: #77716b;
+}
+
+/* Collection Link */
+
+.sa-about-offering-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #98713b;
+    text-decoration: none;
+}
+
+.sa-about-offering-link span {
+    font-size: 17px;
+    transition: transform 0.25s ease;
+}
+
+.sa-about-offering-link:hover span {
+    transform: translateX(4px);
+}
+
+/* Bottom Button */
+
+.sa-about-offerings-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+}
+
+.sa-about-offerings-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    padding: 15px 28px;
+    background: #b58a49;
+    color: #fff;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: background 0.25s ease;
+}
+
+.sa-about-offerings-btn:hover {
+    background: #98713b;
+    color: #fff;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+    .sa-about-offerings {
+        padding: 75px 24px 85px;
+    }
+
+    .sa-about-offerings-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .sa-about-offering-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .sa-about-offering-content h3 {
+        font-size: 23px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .sa-about-offerings {
+        padding: 60px 18px 70px;
+    }
+
+    .sa-about-offerings-header {
+        margin-bottom: 35px;
+    }
+
+    .sa-about-offerings-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .sa-about-offerings-header h2 {
+        font-size: 34px;
+    }
+
+    .sa-about-offerings-header p {
+        font-size: 13px;
+    }
+
+    .sa-about-offerings-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .sa-about-offering-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .sa-about-offering-content {
+        padding: 23px 22px 26px;
+    }
+
+    .sa-about-offering-content h3 {
+        font-size: 24px;
+    }
+
+    .sa-about-offering-content p {
+        font-size: 13px;
+    }
+
+    .sa-about-offerings-footer {
+        margin-top: 35px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sa-about-offering-image img,
+    .sa-about-offering-link span {
+        transition: none;
+    }
+}
+
+
+
+/* =====================================================
+   ABOUT PAGE - SECTION 05
+   WHY CHOOSE US
+===================================================== */
+
+.sa-about-why {
+    width: 100%;
+    padding: 100px 24px 110px;
+    background: #faf8f4;
+}
+
+.sa-about-why-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Heading */
+
+.sa-about-why-header {
+    max-width: 720px;
+    margin: 0 auto 52px;
+    text-align: center;
+}
+
+.sa-about-why-eyebrow {
+    display: block;
+    margin-bottom: 15px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #b58a49;
+}
+
+.sa-about-why-header h2 {
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: #24211e;
+}
+
+.sa-about-why-header h2 em {
+    font-weight: 400;
+    color: #b58a49;
+}
+
+.sa-about-why-header p {
+    max-width: 600px;
+    margin: 19px auto 0;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.85;
+    color: #77716b;
+}
+
+/* Cards Grid */
+
+.sa-about-why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Individual Card */
+
+.sa-about-why-card {
+    position: relative;
+    min-width: 0;
+    min-height: 325px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 36px 27px 35px;
+
+    background: #ffffff;
+    border: 1px solid #eee8df;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sa-about-why-card:hover {
+    transform: translateY(-5px);
+    border-color: #d9c4a5;
+    box-shadow: 0 12px 35px rgba(47, 37, 25, 0.06);
+}
+
+/* Gold Icon */
+
+.sa-about-why-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+    margin-bottom: 29px;
+
+    border: 1px solid #eadcc6;
+    border-radius: 50%;
+
+    background: #fcfaf6;
+    color: #b58a49;
+}
+
+.sa-about-why-icon svg {
+    width: 33px;
+    height: 33px;
+}
+
+/* Number */
+
+.sa-about-why-number {
+    display: block;
+    margin-bottom: 11px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #b58a49;
+}
+
+/* Heading */
+
+.sa-about-why-card h3 {
+    margin: 0 0 15px;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #292520;
+}
+
+/* Description */
+
+.sa-about-why-card p {
+    margin: 0;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #77716b;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+    .sa-about-why {
+        padding: 80px 24px 90px;
+    }
+
+    .sa-about-why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .sa-about-why-card {
+        min-height: 280px;
+    }
+
+    .sa-about-why-card h3 {
+        font-size: 24px;
+    }
+
+    .sa-about-why-card p {
+        font-size: 13px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .sa-about-why {
+        padding: 60px 18px 70px;
+    }
+
+    .sa-about-why-header {
+        margin-bottom: 35px;
+    }
+
+    .sa-about-why-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .sa-about-why-header h2 {
+        font-size: 34px;
+    }
+
+    .sa-about-why-header p {
+        font-size: 13px;
+    }
+
+    .sa-about-why-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .sa-about-why-card {
+        min-height: auto;
+        padding: 30px 26px;
+    }
+
+    .sa-about-why-icon {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 22px;
+    }
+
+    .sa-about-why-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .sa-about-why-card h3 {
+        font-size: 24px;
+    }
+
+    .sa-about-why-card p {
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sa-about-why-card {
+        transition: none;
+    }
+
+    .sa-about-why-card:hover {
+        transform: none;
+    }
+}
+
+
+/* =====================================================
+   ABOUT PAGE - SECTION 06
+   OUR APPROACH
+===================================================== */
+
+.sa-about-approach {
+    width: 100%;
+    padding: 105px 24px 115px;
+    background: #ffffff;
+}
+
+.sa-about-approach-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Header */
+
+.sa-about-approach-header {
+    max-width: 680px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.sa-about-approach-eyebrow {
+    display: block;
+    margin-bottom: 15px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #b58a49;
+}
+
+.sa-about-approach-header h2 {
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.25;
+    color: #24211e;
+}
+
+.sa-about-approach-header h2 em {
+    font-weight: 400;
+    color: #b58a49;
+}
+
+.sa-about-approach-header p {
+    max-width: 570px;
+    margin: 18px auto 0;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.85;
+    color: #77716b;
+}
+
+/* Timeline */
+
+.sa-about-approach-timeline {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+}
+
+/* Horizontal Connecting Line */
+
+.sa-about-approach-timeline::before {
+    content: "";
+    position: absolute;
+
+    top: 38px;
+    left: 12.5%;
+    right: 12.5%;
+
+    height: 1px;
+    background: #e6d7c1;
+}
+
+/* Step */
+
+.sa-about-approach-step {
+    position: relative;
+    min-width: 0;
+    text-align: center;
+}
+
+/* Number Circle */
+
+.sa-about-approach-marker {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 76px;
+    height: 76px;
+
+    margin: 0 auto 32px;
+
+    border: 1px solid #d8bf98;
+    border-radius: 50%;
+
+    background: #faf8f4;
+    color: #b58a49;
+}
+
+.sa-about-approach-marker::after {
+    content: "";
+    position: absolute;
+    inset: 7px;
+
+    border: 1px solid #eee3d3;
+    border-radius: 50%;
+}
+
+.sa-about-approach-marker span {
+    position: relative;
+    z-index: 1;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* Step Content */
+
+.sa-about-approach-step-content {
+    max-width: 255px;
+    margin: 0 auto;
+}
+
+.sa-about-approach-label {
+    display: block;
+    margin-bottom: 12px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #b58a49;
+}
+
+.sa-about-approach-step h3 {
+    margin: 0 0 14px;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #292520;
+}
+
+.sa-about-approach-step p {
+    margin: 0;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #77716b;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+    .sa-about-approach {
+        padding: 80px 24px 90px;
+    }
+
+    .sa-about-approach-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 45px 30px;
+    }
+
+    .sa-about-approach-timeline::before {
+        display: none;
+    }
+
+    .sa-about-approach-marker {
+        margin-bottom: 25px;
+    }
+}
+
+/* Mobile Vertical Timeline */
+
+@media (max-width: 600px) {
+
+    .sa-about-approach {
+        padding: 60px 18px 75px;
+    }
+
+    .sa-about-approach-header {
+        margin-bottom: 45px;
+    }
+
+    .sa-about-approach-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .sa-about-approach-header h2 {
+        font-size: 34px;
+    }
+
+    .sa-about-approach-header p {
+        font-size: 13px;
+    }
+
+    .sa-about-approach-timeline {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .sa-about-approach-timeline::before {
+        display: block;
+
+        top: 38px;
+        bottom: 38px;
+        left: 31px;
+        right: auto;
+
+        width: 1px;
+        height: auto;
+
+        background: #e6d7c1;
+    }
+
+    .sa-about-approach-step {
+        display: grid;
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: 20px;
+
+        padding-bottom: 38px;
+        text-align: left;
+    }
+
+    .sa-about-approach-step:last-child {
+        padding-bottom: 0;
+    }
+
+    .sa-about-approach-marker {
+        width: 64px;
+        height: 64px;
+
+        margin: 0;
+
+        background: #faf8f4;
+    }
+
+    .sa-about-approach-marker span {
+        font-size: 21px;
+    }
+
+    .sa-about-approach-step-content {
+        max-width: none;
+        margin: 7px 0 0;
+    }
+
+    .sa-about-approach-label {
+        margin-bottom: 8px;
+        font-size: 9px;
+    }
+
+    .sa-about-approach-step h3 {
+        margin-bottom: 10px;
+        font-size: 23px;
+    }
+
+    .sa-about-approach-step p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+}
+
+
+
+/* =====================================================
+   ABOUT PAGE - SECTION 07
+   CONTACT CTA
+===================================================== */
+
+.sa-about-cta {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 440px;
+
+    overflow: hidden;
+    background: #29231d;
+}
+
+/* Background Image */
+
+.sa-about-cta-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
+.sa-about-cta-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 55%;
+}
+
+/* Dark Overlay */
+
+.sa-about-cta-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+        90deg,
+        rgba(20, 17, 14, 0.82) 0%,
+        rgba(20, 17, 14, 0.72) 50%,
+        rgba(20, 17, 14, 0.82) 100%
+    );
+}
+
+/* Container */
+
+.sa-about-cta-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 85px 24px;
+}
+
+/* Content */
+
+.sa-about-cta-content {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Eyebrow */
+
+.sa-about-cta-eyebrow {
+    display: block;
+    margin-bottom: 18px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: #e1bd85;
+}
+
+/* Main Heading */
+
+.sa-about-cta-content h2 {
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 4.5vw, 55px);
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+
+    color: #ffffff;
+}
+
+.sa-about-cta-content h2 em {
+    display: block;
+    font-weight: 400;
+    color: #e5c89a;
+}
+
+/* Description */
+
+.sa-about-cta-content p {
+    max-width: 580px;
+    margin: 23px auto 0;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+
+    color: #eee8e0;
+}
+
+/* Action Buttons */
+
+.sa-about-cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 25px;
+    margin-top: 32px;
+}
+
+/* Primary Button */
+
+.sa-about-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    min-height: 48px;
+    padding: 14px 26px;
+
+    background: #b58a49;
+    color: #ffffff;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.sa-about-cta-btn:hover {
+    background: #98713b;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.sa-about-cta-btn span {
+    font-size: 19px;
+    line-height: 1;
+}
+
+/* Secondary Link */
+
+.sa-about-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.sa-about-cta-secondary:hover {
+    color: #e5c89a;
+    border-color: #e5c89a;
+}
+
+.sa-about-cta-secondary span {
+    font-size: 16px;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .sa-about-cta {
+        min-height: 400px;
+    }
+
+    .sa-about-cta-container {
+        padding: 75px 24px;
+    }
+
+    .sa-about-cta-content h2 {
+        font-size: 45px;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .sa-about-cta {
+        min-height: 420px;
+    }
+
+    .sa-about-cta-image img {
+        object-position: 55% center;
+    }
+
+    .sa-about-cta-overlay {
+        background: rgba(20, 17, 14, 0.76);
+    }
+
+    .sa-about-cta-container {
+        padding: 65px 20px;
+    }
+
+    .sa-about-cta-eyebrow {
+        margin-bottom: 15px;
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .sa-about-cta-content h2 {
+        font-size: clamp(32px, 8vw, 40px);
+        line-height: 1.3;
+    }
+
+    .sa-about-cta-content p {
+        margin-top: 18px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .sa-about-cta-actions {
+        flex-direction: column;
+        gap: 17px;
+        margin-top: 28px;
+    }
+
+    .sa-about-cta-btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .sa-about-cta-secondary {
+        font-size: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sa-about-cta-btn,
+    .sa-about-cta-secondary {
+        transition: none;
+    }
+
+    .sa-about-cta-btn:hover {
+        transform: none;
+    }
+}
+
+
+
+/* =====================================================
+   ABOUT PAGE - COMPACT LAYOUT OVERRIDES
+   Keep this at the END of about.css
+===================================================== */
+
+/* 01. HERO */
+
+.sa-about-hero {
+    min-height: 340px;
+}
+
+.sa-about-hero-container {
+    padding: 65px 24px;
+}
+
+.sa-about-hero-content h1 {
+    font-size: clamp(34px, 4vw, 52px);
+}
+
+.sa-about-hero-content p {
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.sa-about-breadcrumb {
+    margin-top: 18px;
+}
+
+/* 02. OUR STORY */
+
+.sa-about-story {
+    padding: 65px 24px;
+}
+
+.sa-about-story-container {
+    gap: 55px;
+}
+
+.sa-about-story-image {
+    height: 410px;
+}
+
+.sa-about-story-content h2 {
+    font-size: clamp(29px, 3vw, 39px);
+    line-height: 1.25;
+}
+
+.sa-about-story-eyebrow {
+    margin-bottom: 12px;
+}
+
+.sa-about-story-line {
+    margin: 18px 0;
+}
+
+.sa-about-story-content p {
+    margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.sa-about-story-highlights {
+    margin-top: 18px;
+    gap: 10px;
+}
+
+.sa-about-story-btn {
+    margin-top: 24px;
+}
+
+/* 03. MISSION & VISION */
+
+.sa-about-purpose {
+    padding: 65px 24px;
+}
+
+.sa-about-purpose-header {
+    margin-bottom: 32px;
+}
+
+.sa-about-purpose-header h2 {
+    font-size: clamp(30px, 3.5vw, 40px);
+}
+
+.sa-about-purpose-header p {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.sa-about-purpose-card {
+    padding: 30px;
+}
+
+.sa-about-purpose-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+}
+
+.sa-about-purpose-icon svg {
+    width: 27px;
+    height: 27px;
+}
+
+.sa-about-purpose-card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.sa-about-purpose-card p {
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.sa-about-purpose-rule {
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+/* 04. WHAT WE OFFER */
+
+.sa-about-offerings {
+    padding: 65px 24px;
+}
+
+.sa-about-offerings-header {
+    margin-bottom: 32px;
+}
+
+.sa-about-offerings-header h2 {
+    font-size: clamp(30px, 3.5vw, 40px);
+}
+
+.sa-about-offerings-header p {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.sa-about-offering-image {
+    aspect-ratio: 4 / 3;
+}
+
+.sa-about-offering-content {
+    padding: 20px 18px 22px;
+}
+
+.sa-about-offering-content h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.sa-about-offering-content p {
+    font-size: 12px;
+    line-height: 1.65;
+    margin-bottom: 14px;
+}
+
+.sa-about-offerings-footer {
+    margin-top: 28px;
+}
+
+/* 05. WHY CHOOSE US */
+
+.sa-about-why {
+    padding: 65px 24px;
+}
+
+.sa-about-why-header {
+    margin-bottom: 32px;
+}
+
+.sa-about-why-header h2 {
+    font-size: clamp(30px, 3.5vw, 40px);
+}
+
+.sa-about-why-header p {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.sa-about-why-card {
+    min-height: 255px;
+    padding: 25px 22px;
+}
+
+.sa-about-why-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 18px;
+}
+
+.sa-about-why-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.sa-about-why-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sa-about-why-card p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* 06. OUR APPROACH */
+
+.sa-about-approach {
+    padding: 65px 24px 75px;
+}
+
+.sa-about-approach-header {
+    margin-bottom: 40px;
+}
+
+.sa-about-approach-header h2 {
+    font-size: clamp(30px, 3.5vw, 40px);
+}
+
+.sa-about-approach-header p {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.sa-about-approach-marker {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 22px;
+}
+
+.sa-about-approach-timeline::before {
+    top: 30px;
+}
+
+.sa-about-approach-marker span {
+    font-size: 21px;
+}
+
+.sa-about-approach-step h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sa-about-approach-step p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* 07. CONTACT CTA */
+
+.sa-about-cta {
+    min-height: 320px;
+}
+
+.sa-about-cta-container {
+    padding: 60px 24px;
+}
+
+.sa-about-cta-content h2 {
+    font-size: clamp(32px, 4vw, 46px);
+}
+
+.sa-about-cta-content p {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.sa-about-cta-actions {
+    margin-top: 24px;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .sa-about-story-container {
+        gap: 30px;
+    }
+
+    .sa-about-story-image {
+        height: 380px;
+    }
+
+    .sa-about-why-card {
+        min-height: 230px;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .sa-about-hero {
+        min-height: 290px;
+    }
+
+    .sa-about-hero-container {
+        padding: 55px 18px;
+    }
+
+    .sa-about-hero-content h1 {
+        font-size: clamp(30px, 8vw, 39px);
+    }
+
+    .sa-about-story,
+    .sa-about-purpose,
+    .sa-about-offerings,
+    .sa-about-why,
+    .sa-about-approach {
+        padding: 48px 18px;
+    }
+
+    .sa-about-story-container {
+        gap: 25px;
+    }
+
+    .sa-about-story-image {
+        height: 300px;
+    }
+
+    .sa-about-story-content h2 {
+        font-size: 30px;
+    }
+
+    .sa-about-purpose-card {
+        padding: 25px 22px;
+    }
+
+    .sa-about-offering-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .sa-about-why-card {
+        min-height: auto;
+        padding: 24px 22px;
+    }
+
+    .sa-about-approach-header {
+        margin-bottom: 30px;
+    }
+
+    .sa-about-approach-timeline::before {
+        top: 30px;
+        bottom: 30px;
+        left: 30px;
+        right: auto;
+        width: 1px;
+        height: auto;
+    }
+
+    .sa-about-approach-step {
+        padding-bottom: 28px;
+    }
+
+    .sa-about-approach-marker {
+        width: 60px;
+        height: 60px;
+        margin: 0;
+    }
+
+    .sa-about-cta {
+        min-height: 320px;
+    }
+
+    .sa-about-cta-container {
+        padding: 50px 18px;
+    }
+
+    .sa-about-cta-content h2 {
+        font-size: 32px;
+    }
+}
+
+
+
+/* =====================================================
+   ABOUT PAGE - SCROLL REVEAL ANIMATIONS
+===================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+    .sa-about-reveal {
+        opacity: 0;
+        transform: translateY(22px);
+
+        transition:
+            opacity 0.65s ease,
+            transform 0.65s ease;
+
+        transition-delay: var(--sa-reveal-delay, 0ms);
+    }
+
+    .sa-about-reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Avoid hover transform conflict */
+
+    .sa-about-why-card.sa-about-reveal.is-visible:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sa-about-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

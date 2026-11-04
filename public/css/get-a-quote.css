@@ -1,0 +1,1012 @@
+
+/* =====================================================
+   SOFT ALLURE DECOR
+   GET A QUOTE - SECTION 01
+===================================================== */
+
+.sa-quote-hero {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 290px;
+
+    background: #24211e;
+    overflow: hidden;
+}
+
+/* Background Image */
+
+.sa-quote-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
+.sa-quote-hero-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 55%;
+}
+
+/* Overlay */
+
+.sa-quote-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+        90deg,
+        rgba(20, 17, 14, 0.75),
+        rgba(20, 17, 14, 0.52) 50%,
+        rgba(20, 17, 14, 0.75)
+    );
+}
+
+/* Container */
+
+.sa-quote-hero-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 50px 24px;
+}
+
+.sa-quote-hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Eyebrow */
+
+.sa-quote-hero-eyebrow {
+    display: block;
+    margin-bottom: 12px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.7px;
+
+    color: #e0bd86;
+}
+
+/* Heading */
+
+.sa-quote-hero-content h1 {
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 4.5vw, 52px);
+    font-weight: 400;
+    line-height: 1.2;
+
+    color: #ffffff;
+}
+
+.sa-quote-hero-content h1 em {
+    font-weight: 400;
+    color: #e5c89a;
+}
+
+/* Description */
+
+.sa-quote-hero-content p {
+    max-width: 570px;
+    margin: 14px auto 0;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: #f0eae2;
+}
+
+/* Breadcrumb */
+
+.sa-quote-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 18px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+
+    color: #e7dfd5;
+}
+
+.sa-quote-breadcrumb a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.sa-quote-breadcrumb a:hover {
+    color: #e5c89a;
+}
+
+.sa-quote-breadcrumb > span:nth-child(2) {
+    color: #e0bd86;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+    .sa-quote-hero {
+        min-height: 270px;
+    }
+
+    .sa-quote-hero-container {
+        padding: 45px 22px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .sa-quote-hero {
+        min-height: 240px;
+    }
+
+    .sa-quote-hero-container {
+        padding: 38px 18px;
+    }
+
+    .sa-quote-hero-overlay {
+        background: rgba(20, 17, 14, 0.68);
+    }
+
+    .sa-quote-hero-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .sa-quote-hero-content h1 {
+        font-size: 35px;
+    }
+
+    .sa-quote-hero-content p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .sa-quote-breadcrumb {
+        margin-top: 15px;
+        font-size: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sa-quote-breadcrumb a {
+        transition: none;
+    }
+}
+
+
+
+
+/* =====================================================
+   GET A QUOTE - SECTION 02
+   PREMIUM QUOTE REQUEST FORM
+===================================================== */
+
+.sa-quote-main {
+    padding: 65px 24px;
+    background: #faf8f4;
+}
+
+.sa-quote-main-container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Heading */
+
+.sa-quote-form-heading {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.sa-quote-section-eyebrow {
+    display: block;
+    margin-bottom: 12px;
+
+    color: #b58a49;
+    font: 700 10px 'DM Sans', sans-serif;
+    letter-spacing: 2.4px;
+}
+
+.sa-quote-form-heading h2 {
+    margin: 0;
+    color: #24211e;
+
+    font: 400 clamp(30px, 3.5vw, 42px)/1.25
+          'Playfair Display', serif;
+}
+
+.sa-quote-form-heading h2 em {
+    color: #b58a49;
+    font-weight: 400;
+}
+
+.sa-quote-form-heading p {
+    margin: 13px 0 0;
+    color: #77716b;
+
+    font: 400 13px/1.8 'DM Sans', sans-serif;
+}
+
+/* Form Card */
+
+.sa-quote-form-card {
+    padding: 40px;
+    background: #ffffff;
+
+    border: 1px solid #ebe3d9;
+    box-shadow: 0 10px 35px rgba(36, 33, 30, 0.035);
+}
+
+.sa-quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+/* Group Titles */
+
+.sa-quote-form-group-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 5px 0 0;
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid #eee7dd;
+
+    color: #24211e;
+    font: 400 23px 'Playfair Display', serif;
+}
+
+.sa-quote-form-group-title span {
+    color: #b58a49;
+    font: 700 11px 'DM Sans', sans-serif;
+}
+
+/* Fields */
+
+.sa-quote-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px;
+}
+
+.sa-quote-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.sa-quote-field label {
+    margin-bottom: 8px;
+    color: #3e3934;
+
+    font: 600 11px 'DM Sans', sans-serif;
+}
+
+.sa-quote-field label span {
+    color: #b58a49;
+}
+
+.sa-quote-field label .sa-quote-optional {
+    color: #8a837c;
+    font-weight: 400;
+}
+
+.sa-quote-field input:not([type="file"]),
+.sa-quote-field select,
+.sa-quote-field textarea {
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px 13px;
+    border: 1px solid #e7e0d7;
+    border-radius: 0;
+
+    background: #ffffff;
+    color: #24211e;
+
+    font: 400 12px 'DM Sans', sans-serif;
+    transition: border-color 0.2s ease;
+}
+
+.sa-quote-field input:not([type="file"]),
+.sa-quote-field select {
+    min-height: 45px;
+}
+
+.sa-quote-field textarea {
+    min-height: 125px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.sa-quote-field input:focus,
+.sa-quote-field select:focus,
+.sa-quote-field textarea:focus {
+    outline: 2px solid rgba(181, 138, 73, 0.2);
+    outline-offset: 1px;
+    border-color: #b58a49;
+}
+
+.sa-quote-field small {
+    margin-top: 6px;
+    color: #b54747;
+    font: 400 11px 'DM Sans', sans-serif;
+}
+
+/* Upload */
+
+.sa-quote-upload {
+    padding: 19px;
+    border: 1px dashed #d8c6ac;
+    background: #fdfbf8;
+}
+
+.sa-quote-upload input[type="file"] {
+    display: block;
+    max-width: 100%;
+    color: #4e4842;
+
+    font: 400 12px 'DM Sans', sans-serif;
+}
+
+.sa-quote-upload input::file-selector-button {
+    margin-right: 12px;
+    padding: 9px 14px;
+
+    border: 1px solid #d8c6ac;
+    background: #ffffff;
+    color: #98713b;
+
+    font: 600 11px 'DM Sans', sans-serif;
+    cursor: pointer;
+}
+
+.sa-quote-upload p {
+    margin: 11px 0 0;
+    color: #8a837c;
+
+    font: 400 11px 'DM Sans', sans-serif;
+}
+
+#sa-quote-file-name {
+    display: block;
+    margin-top: 8px;
+    color: #98713b;
+
+    font: 500 11px 'DM Sans', sans-serif;
+}
+
+/* Submit */
+
+.sa-quote-form-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.sa-quote-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    min-height: 47px;
+    padding: 13px 25px;
+
+    border: 0;
+    background: #b58a49;
+    color: #ffffff;
+
+    font: 700 12px 'DM Sans', sans-serif;
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.sa-quote-submit:hover {
+    background: #98713b;
+}
+
+.sa-quote-submit:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.sa-quote-form-bottom p {
+    margin: 0;
+    color: #8a837c;
+
+    font: 400 10px/1.6 'DM Sans', sans-serif;
+}
+
+/* Alerts */
+
+.sa-quote-alert {
+    padding: 13px 15px;
+    margin-bottom: 25px;
+
+    font: 500 12px/1.6 'DM Sans', sans-serif;
+}
+
+.sa-quote-alert-success {
+    background: #edf7ed;
+    color: #27633c;
+    border: 1px solid #b9dfc0;
+}
+
+.sa-quote-alert-error {
+    background: #fff0ef;
+    color: #9f3333;
+    border: 1px solid #f0c4c0;
+}
+
+/* Honeypot */
+
+.sa-quote-honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+    .sa-quote-main {
+        padding: 55px 22px;
+    }
+
+    .sa-quote-form-card {
+        padding: 30px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .sa-quote-main {
+        padding: 45px 16px;
+    }
+
+    .sa-quote-form-heading {
+        margin-bottom: 25px;
+    }
+
+    .sa-quote-form-heading h2 {
+        font-size: 31px;
+    }
+
+    .sa-quote-form-heading p {
+        font-size: 12px;
+    }
+
+    .sa-quote-form-card {
+        padding: 25px 18px;
+    }
+
+    .sa-quote-form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .sa-quote-form-group-title {
+        font-size: 21px;
+    }
+
+    .sa-quote-submit {
+        width: 100%;
+    }
+}
+
+
+
+/* =====================================================
+   GET A QUOTE - SECTION 03
+   HOW IT WORKS
+===================================================== */
+
+.sa-quote-process {
+    padding: 65px 24px;
+    background: #faf8f4;
+}
+
+.sa-quote-process-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Heading */
+
+.sa-quote-process-heading {
+    max-width: 620px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.sa-quote-process-eyebrow {
+    display: block;
+    margin-bottom: 12px;
+
+    color: #b58a49;
+    font: 700 10px 'DM Sans', sans-serif;
+    letter-spacing: 2.4px;
+}
+
+.sa-quote-process-heading h2 {
+    margin: 0;
+    color: #24211e;
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 3.5vw, 42px);
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.sa-quote-process-heading h2 em {
+    color: #b58a49;
+    font-weight: 400;
+}
+
+.sa-quote-process-heading p {
+    margin: 13px 0 0;
+
+    color: #77716b;
+    font: 400 13px/1.8 'DM Sans', sans-serif;
+}
+
+/* Steps Grid */
+
+.sa-quote-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Step Card */
+
+.sa-quote-process-card {
+    position: relative;
+    min-width: 0;
+
+    padding: 30px 25px;
+    text-align: center;
+
+    background: #ffffff;
+    border: 1px solid #eee7dd;
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.sa-quote-process-card:hover {
+    border-color: #d9bc8f;
+    transform: translateY(-4px);
+}
+
+/* Step Number */
+
+.sa-quote-process-number {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+
+    color: #d3b78e;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Icon */
+
+.sa-quote-process-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+
+    margin: 0 auto 20px;
+
+    background: #f6f0e7;
+    color: #b58a49;
+    border-radius: 50%;
+}
+
+.sa-quote-process-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Card Heading */
+
+.sa-quote-process-card h3 {
+    margin: 0 0 12px;
+
+    color: #24211e;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.35;
+}
+
+/* Card Description */
+
+.sa-quote-process-card p {
+    max-width: 285px;
+    margin: 0 auto;
+
+    color: #77716b;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+    .sa-quote-process {
+        padding: 55px 22px;
+    }
+
+    .sa-quote-process-grid {
+        gap: 14px;
+    }
+
+    .sa-quote-process-card {
+        padding: 27px 18px;
+    }
+
+    .sa-quote-process-card h3 {
+        font-size: 19px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .sa-quote-process {
+        padding: 45px 16px;
+    }
+
+    .sa-quote-process-heading {
+        margin-bottom: 25px;
+    }
+
+    .sa-quote-process-heading h2 {
+        font-size: 32px;
+    }
+
+    .sa-quote-process-heading p {
+        font-size: 12px;
+    }
+
+    .sa-quote-process-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .sa-quote-process-card {
+        padding: 24px 22px;
+    }
+
+    .sa-quote-process-icon {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 14px;
+    }
+
+    .sa-quote-process-icon svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .sa-quote-process-card h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sa-quote-process-card {
+        transition: none;
+    }
+
+    .sa-quote-process-card:hover {
+        transform: none;
+    }
+}
+
+
+
+/* =====================================================
+   GET A QUOTE - SECTION 04
+   FINAL PREMIUM ASSISTANCE CTA
+===================================================== */
+
+.sa-quote-final-cta {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    padding: 68px 24px;
+
+    background: #24211e;
+    overflow: hidden;
+}
+
+/* Decorative Gold Corners */
+
+.sa-quote-final-cta::before,
+.sa-quote-final-cta::after {
+    content: "";
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border: 1px solid rgba(181, 138, 73, 0.2);
+    pointer-events: none;
+}
+
+.sa-quote-final-cta::before {
+    top: -75px;
+    left: -75px;
+}
+
+.sa-quote-final-cta::after {
+    right: -75px;
+    bottom: -75px;
+}
+
+/* Container */
+
+.sa-quote-final-container {
+    position: relative;
+    z-index: 1;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sa-quote-final-content {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Eyebrow */
+
+.sa-quote-final-eyebrow {
+    display: block;
+    margin-bottom: 14px;
+
+    color: #d9b77d;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+/* Heading */
+
+.sa-quote-final-content h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(31px, 4vw, 43px);
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.sa-quote-final-content h2 em {
+    color: #e5c89a;
+    font-weight: 400;
+}
+
+/* Description */
+
+.sa-quote-final-content p {
+    max-width: 570px;
+    margin: 16px auto 0;
+
+    color: #d4cdc4;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* Buttons Container */
+
+.sa-quote-final-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 13px;
+    margin-top: 27px;
+}
+
+/* Shared Button */
+
+.sa-quote-final-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 46px;
+    min-width: 155px;
+    padding: 12px 23px;
+
+    border: 1px solid transparent;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.sa-quote-final-btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Primary Button */
+
+.sa-quote-final-btn-primary {
+    background: #b58a49;
+    border-color: #b58a49;
+    color: #ffffff;
+}
+
+.sa-quote-final-btn-primary:hover {
+    background: #98713b;
+    border-color: #98713b;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+/* Outline Button */
+
+.sa-quote-final-btn-outline {
+    background: transparent;
+    border-color: #c6a978;
+    color: #ffffff;
+}
+
+.sa-quote-final-btn-outline:hover {
+    background: #b58a49;
+    border-color: #b58a49;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+/* Focus Accessibility */
+
+.sa-quote-final-btn:focus-visible {
+    outline: 2px solid #e5c89a;
+    outline-offset: 4px;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+    .sa-quote-final-cta {
+        padding: 55px 22px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .sa-quote-final-cta {
+        padding: 48px 18px;
+    }
+
+    .sa-quote-final-eyebrow {
+        margin-bottom: 12px;
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .sa-quote-final-content h2 {
+        font-size: 32px;
+    }
+
+    .sa-quote-final-content p {
+        margin-top: 13px;
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .sa-quote-final-actions {
+        gap: 10px;
+        margin-top: 23px;
+    }
+
+    .sa-quote-final-btn {
+        min-width: 145px;
+        padding: 12px 17px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 380px) {
+    .sa-quote-final-actions {
+        flex-direction: column;
+    }
+
+    .sa-quote-final-btn {
+        width: 100%;
+        max-width: 270px;
+    }
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .sa-quote-final-btn {
+        transition: none;
+    }
+
+    .sa-quote-final-btn:hover {
+        transform: none;
+    }
+}

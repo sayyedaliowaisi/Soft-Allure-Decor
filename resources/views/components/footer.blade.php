@@ -1,226 +1,175 @@
-<footer class="bg-gray-950 text-white">
 
-    <!-- Main Footer -->
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20">
+{{-- ============================================
+     SOFT ALLURE DÉCOR - PREMIUM FOOTER
+============================================ --}}
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+<footer class="sa-footer" id="footer">
 
-            <!-- Brand -->
-            <div class="lg:col-span-1">
+    <div class="sa-footer-container">
 
-                <a href="{{ route('home') }}" class="inline-block">
-                    <img
-                        src="{{ asset('images/logo.png') }}"
-                        alt="Soft Allure Décor"
-                        class="h-14 w-auto">
+        {{-- MAIN FOOTER --}}
+        <div class="sa-footer-top">
+
+            {{-- BRAND --}}
+            <div class="sa-footer-brand-wrap">
+
+                <a href="{{ route('home') }}"
+                   class="sa-footer-brand"
+                   aria-label="Soft Allure Décor Home">
+
+                    {{-- Golden House Logo --}}
+                    <span class="sa-footer-house">
+                        <svg viewBox="0 0 64 64"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2.2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+
+                            <path d="M5 28 32 5l27 23"/>
+                            <path d="M12 24v34h40V24"/>
+                            <path d="M24 58V38h16v20"/>
+                            <path d="M5 38 32 15l27 23"/>
+
+                        </svg>
+                    </span>
+
+                    <span class="sa-footer-brand-text">
+
+                        <span class="sa-footer-logo">
+                            Soft Allure
+                        </span>
+
+                        <span class="sa-footer-logo-sub">
+                            <span></span>
+                            DÉCOR
+                            <span></span>
+                        </span>
+
+                    </span>
+
                 </a>
 
-                <p class="mt-6 text-gray-400 leading-7">
-                    Premium home décor solutions designed to bring
-                    elegance, comfort, and character to modern spaces.
+                <p class="sa-footer-tagline">
+                    Elegant in Every Detail
                 </p>
 
-                <!-- Social -->
-                <div class="mt-7 flex gap-3">
-
-                    <a href="#"
-                       class="w-10 h-10 rounded-full bg-white/5
-                              border border-white/10
-                              flex items-center justify-center
-                              hover:bg-yellow-500
-                              hover:text-black
-                              transition">
-                        f
-                    </a>
-
-                    <a href="#"
-                       class="w-10 h-10 rounded-full bg-white/5
-                              border border-white/10
-                              flex items-center justify-center
-                              hover:bg-yellow-500
-                              hover:text-black
-                              transition">
-                        ◎
-                    </a>
-
-                    <a href="#"
-                       class="w-10 h-10 rounded-full bg-white/5
-                              border border-white/10
-                              flex items-center justify-center
-                              hover:bg-yellow-500
-                              hover:text-black
-                              transition">
-                        in
-                    </a>
-
-                </div>
-
             </div>
 
+            {{-- FOOTER NAVIGATION --}}
+            <nav class="sa-footer-nav"
+                 aria-label="Footer navigation">
 
-            <!-- Quick Links -->
-            <div>
+                <a href="{{ route('home') }}">
+                    Home
+                </a>
 
-                <h3 class="text-lg font-bold">
-                    Quick Links
-                </h3>
+                <a href="{{ route('products') }}">
+                    Products
+                </a>
 
-                <ul class="mt-6 space-y-4">
+                <a href="{{ route('gallery') }}">
+                    Gallery
+                </a>
 
-                    <li>
-                        <a href="{{ route('home') }}"
-                           class="text-gray-400 hover:text-yellow-400 transition">
-                            Home
-                        </a>
-                    </li>
+                <a href="{{ route('about') }}">
+                    About Us
+                </a>
 
-                    <li>
-                        <a href="{{ route('about') }}"
-                           class="text-gray-400 hover:text-yellow-400 transition">
-                            About Us
-                        </a>
-                    </li>
+                <a href="{{ route('home') }}#testimonials">
+                    Testimonials
+                </a>
 
-                    <li>
-                        <a href="{{ route('products') }}"
-                           class="text-gray-400 hover:text-yellow-400 transition">
-                            Products
-                        </a>
-                    </li>
+                <a href="{{ route('contact') }}">
+                    Contact
+                </a>
 
-                    <li>
-                        <a href="{{ route('gallery') }}"
-                           class="text-gray-400 hover:text-yellow-400 transition">
-                            Gallery
-                        </a>
-                    </li>
+            </nav>
 
-                    <li>
-                        <a href="{{ route('contact') }}"
-                           class="text-gray-400 hover:text-yellow-400 transition">
-                            Contact
-                        </a>
-                    </li>
+            {{-- SOCIAL MEDIA --}}
+            <div class="sa-footer-social-wrap">
 
-                </ul>
+                <span class="sa-footer-follow">
+                    Follow Us
+                </span>
 
-            </div>
+                <div class="sa-footer-social">
 
+                    {{-- Facebook --}}
+                    <span class="sa-footer-social-icon"
+                          title="Facebook"
+                          aria-label="Facebook">
 
-            <!-- Products -->
-            <div>
+                        <svg viewBox="0 0 24 24"
+                             fill="currentColor"
+                             aria-hidden="true">
+                            <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/>
+                        </svg>
 
-                <h3 class="text-lg font-bold">
-                    Our Products
-                </h3>
+                    </span>
 
-                <ul class="mt-6 space-y-4">
+                    {{-- Instagram --}}
+                    <span class="sa-footer-social-icon"
+                          title="Instagram"
+                          aria-label="Instagram">
 
-                    <li>
-                        <a href="{{ route('products') }}"
-                           class="text-gray-400 hover:text-yellow-400 transition">
-                            Decorative Wall Panels
-                        </a>
-                    </li>
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.8"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
 
-                    <li>
-                        <a href="{{ route('products') }}"
-                           class="text-gray-400 hover:text-yellow-400 transition">
-                            Decorative Cushions
-                        </a>
-                    </li>
+                            <rect x="3" y="3"
+                                  width="18"
+                                  height="18"
+                                  rx="5"/>
 
-                    <li>
-                        <a href="{{ route('products') }}"
-                           class="text-gray-400 hover:text-yellow-400 transition">
-                            Custom Décor
-                        </a>
-                    </li>
+                            <circle cx="12"
+                                    cy="12"
+                                    r="4"/>
 
-                    <li>
-                        <a href="{{ route('products') }}"
-                           class="text-gray-400 hover:text-yellow-400 transition">
-                            Bulk / Wholesale
-                        </a>
-                    </li>
+                            <circle cx="17.5"
+                                    cy="6.5"
+                                    r="1"
+                                    fill="currentColor"
+                                    stroke="none"/>
 
-                </ul>
+                        </svg>
 
-            </div>
+                    </span>
 
+                    {{-- LinkedIn --}}
+                    <span class="sa-footer-social-icon"
+                          title="LinkedIn"
+                          aria-label="LinkedIn">
 
-            <!-- Contact -->
-            <div>
+                        <svg viewBox="0 0 24 24"
+                             fill="currentColor"
+                             aria-hidden="true">
 
-                <h3 class="text-lg font-bold">
-                    Get In Touch
-                </h3>
+                            <path d="M5.2 3a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4ZM3.5 9h3.4v12H3.5V9ZM9 9h3.3v1.6h.05c.46-.87 1.59-1.8 3.27-1.8 3.5 0 4.15 2.3 4.15 5.3V21h-3.44v-6.1c0-1.45-.03-3.3-2.02-3.3-2.02 0-2.33 1.57-2.33 3.2V21H9V9Z"/>
 
-                <div class="mt-6 space-y-5">
+                        </svg>
 
-                    <div class="flex gap-4">
+                    </span>
 
-                        <div class="text-yellow-400">
-                            @
-                        </div>
+                    {{-- Pinterest --}}
+                    <span class="sa-footer-social-icon"
+                          title="Pinterest"
+                          aria-label="Pinterest">
 
-                        <div>
+                        <svg viewBox="0 0 24 24"
+                             fill="currentColor"
+                             aria-hidden="true">
 
-                            <p class="text-sm text-gray-500">
-                                Email
-                            </p>
+                            <path d="M12 2a10 10 0 0 0-3.64 19.32c-.03-.79-.01-1.74.2-2.59l1.3-5.49s-.32-.65-.32-1.61c0-1.51.87-2.64 1.96-2.64.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.55 1.98 1.62 1.98 1.95 0 3.45-2.06 3.45-5.04 0-2.63-1.89-4.47-4.59-4.47-3.13 0-4.96 2.34-4.96 4.76 0 .94.36 1.94.81 2.49.09.11.1.21.08.32l-.3 1.23c-.05.2-.16.24-.37.15-1.37-.64-2.23-2.64-2.23-4.25 0-3.46 2.51-6.64 7.24-6.64 3.8 0 6.75 2.71 6.75 6.33 0 3.78-2.38 6.82-5.68 6.82-1.11 0-2.16-.58-2.52-1.26l-.69 2.62c-.25.97-.92 2.18-1.37 3.01A10 10 0 1 0 12 2Z"/>
 
-                            <a href="mailto:info@example.com"
-                               class="text-gray-300 hover:text-yellow-400 transition">
-                                info@example.com
-                            </a>
+                        </svg>
 
-                        </div>
-
-                    </div>
-
-
-                    <div class="flex gap-4">
-
-                        <div class="text-yellow-400">
-                            ☎
-                        </div>
-
-                        <div>
-
-                            <p class="text-sm text-gray-500">
-                                Phone
-                            </p>
-
-                            <a href="tel:+910000000000"
-                               class="text-gray-300 hover:text-yellow-400 transition">
-                                +91 00000 00000
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="flex gap-4">
-
-                        <div class="text-yellow-400">
-                            ⌖
-                        </div>
-
-                        <div>
-
-                            <p class="text-sm text-gray-500">
-                                Location
-                            </p>
-
-                            <p class="text-gray-300">
-                                India
-                            </p>
-
-                        </div>
-
-                    </div>
+                    </span>
 
                 </div>
 
@@ -228,32 +177,24 @@
 
         </div>
 
-    </div>
+        {{-- BOTTOM FOOTER --}}
+        <div class="sa-footer-bottom">
 
-
-    <!-- Bottom Bar -->
-    <div class="border-t border-white/10">
-
-        <div class="max-w-7xl mx-auto px-6 lg:px-8
-                    py-6
-                    flex flex-col md:flex-row
-                    items-center justify-between
-                    gap-4">
-
-            <p class="text-sm text-gray-500 text-center md:text-left">
-                © {{ date('Y') }} Soft Allure Décor. All rights reserved.
+            <p class="sa-footer-copyright">
+                &copy; {{ date('Y') }} Soft Allure Décor.
+                All rights reserved.
             </p>
 
-            <div class="flex gap-6 text-sm">
+            <div class="sa-footer-legal">
 
-                <a href="#"
-                   class="text-gray-500 hover:text-yellow-400 transition">
+                <a href="{{ url('/privacy-policy') }}">
                     Privacy Policy
                 </a>
 
-                <a href="#"
-                   class="text-gray-500 hover:text-yellow-400 transition">
-                    Terms & Conditions
+                <span class="sa-footer-divider">|</span>
+
+                <a href="{{ url('/terms-and-conditions') }}">
+                    Terms &amp; Conditions
                 </a>
 
             </div>

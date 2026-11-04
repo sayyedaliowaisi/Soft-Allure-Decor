@@ -1,455 +1,367 @@
-<header
-    x-data="{
-        mobileMenu: false,
-        scrolled: false
-    }"
+{{-- PREMIUM INFORMATION BAR --}}
+<div class="sa-topbar">
+    <div class="sa-topbar-inner">
+        <span class="sa-topbar-message">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/></svg>
+            Premium Home Décor &amp; Furnishings
+        </span>
+        <div class="sa-topbar-benefits">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2a8 8 0 0 1 16 0v2M4 12h3v7H5a2 2 0 0 1-2-2v-3a2 2 0 0 1 1-2ZM20 12h-3v7h2a2 2 0 0 0 2-2v-3a2 2 0 0 0-1-2Z"/></svg>Free Consultation</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l4 7-10 11L2 10l4-7ZM2 10h20M9 3l-2 7 5 11 5-11-2-7"/></svg>Custom Solutions</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h10l6 6v12H4zM14 3v6h6M7 13h10M7 17h7"/></svg>On-Time Delivery</span>
+        </div>
+    </div>
+</div>
 
-    x-init="
-        const handleScroll = () => {
-            scrolled = window.scrollY > 40;
-        };
+<header class="site-header sa-header" id="siteHeader">
+    <div class="navbar-container sa-navbar-container">
 
-        handleScroll();
+        {{-- BRAND + HOME ICON --}}
+        <div class="sa-brand-group">
 
-        window.addEventListener('scroll', handleScroll);
+            <a href="{{ route('home') }}"
+               class="sa-home-icon"
+               aria-label="Go to homepage"
+               title="Home">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 64 64"
+                     fill="none" stroke="currentColor" stroke-width="2.4"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 28 32 5l27 23M12 24v34h40V24M24 58V38h16v20M5 38 32 15l27 23"/>
+                    <path d="M20 9V3M44 9V3"/>
+                </svg>
+            </a>
 
-        $watch('mobileMenu', value => {
-            document.body.classList.toggle('overflow-hidden', value);
-        });
-    "
-
-    @keydown.escape.window="mobileMenu = false"
-
-    class="fixed inset-x-0 top-0 z-[100]"
->
-
-    {{-- =========================================================
-         TOP INFORMATION BAR
-    ========================================================== --}}
-
-    <div
-        x-show="!scrolled"
-        x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0 -translate-y-2"
-        x-transition:enter-end="opacity-100 translate-y-0"
-        x-transition:leave="transition ease-in duration-200"
-        x-transition:leave-start="opacity-100 translate-y-0"
-        x-transition:leave-end="opacity-0 -translate-y-2"
-        class="hidden lg:block bg-black text-white"
-    >
-
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
-            <div class="flex min-h-[40px] items-center justify-between text-sm">
-
-                <p class="tracking-wide">
-                    Premium Home Décor & Furnishings
-                </p>
-
-                <div class="flex items-center gap-7">
-
-                    <a
-                        href="tel:+919311036306"
-                        class="transition hover:text-amber-400"
-                    >
-                        +91 9311036306
-                    </a>
-
-                    <a
-                        href="mailto:softallure.decor@gmail.com"
-                        class="transition hover:text-amber-400"
-                    >
-                        softallure.decor@gmail.com
-                    </a>
-
-                </div>
-
-            </div>
+            <a href="{{ route('home') }}"
+               class="navbar-logo sa-logo"
+               aria-label="Soft Allure Décor Home">
+                <span class="navbar-logo-main">Soft Allure</span>
+                <span class="navbar-logo-sub">
+                    <span></span>DÉCOR<span></span>
+                </span>
+            </a>
 
         </div>
 
-    </div>
+        {{-- DESKTOP NAVIGATION --}}
+        <nav class="desktop-nav sa-desktop-nav"
+             aria-label="Main navigation">
 
+            <a href="{{ route('home') }}"
+               class="{{ request()->routeIs('home') ? 'active' : '' }}">
+                Home
+            </a>
 
-    {{-- =========================================================
-         MAIN NAVBAR
-    ========================================================== --}}
+            {{-- PRODUCTS DROPDOWN --}}
+            <div class="sa-products-menu"
+                 data-products-menu>
 
-    <nav
-        :class="scrolled
-            ? 'bg-white shadow-lg'
-            : 'bg-black/80 backdrop-blur-md'"
-        class="transition-all duration-500"
-    >
-
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-            <div class="flex h-16 items-center justify-between lg:h-20">
-
-                {{-- =================================================
-                     LOGO
-                ================================================== --}}
-
-                <a
-                    href="{{ route('home') }}"
-                    class="shrink-0"
-                >
-
-                    <img
-                        src="{{ asset('images/logo.png') }}"
-                        alt="Soft Allure Décor"
-                        class="h-10 w-auto object-contain transition-all duration-500 lg:h-12"
-                        :class="scrolled ? 'lg:h-10' : 'lg:h-12'"
-                    >
-
-                </a>
-
-
-                {{-- =================================================
-                     DESKTOP MENU
-                ================================================== --}}
-
-                <div class="hidden items-center gap-9 lg:flex">
-
-                    <a
-                        href="{{ route('home') }}"
-                        class="menu-link"
-                        :class="scrolled ? 'text-black' : 'text-white'"
-                    >
-                        Home
-                    </a>
-
-                    <a
-                        href="{{ route('about') }}"
-                        class="menu-link"
-                        :class="scrolled ? 'text-black' : 'text-white'"
-                    >
-                        About
-                    </a>
-
-                    <a
-                        href="{{ route('home') }}#products"
-                        class="menu-link"
-                        :class="scrolled ? 'text-black' : 'text-white'"
-                    >
+                <div class="sa-products-trigger">
+                    <a href="{{ route('products') }}"
+                       class="sa-products-link {{ request()->routeIs('products*') ? 'active' : '' }}">
                         Products
                     </a>
 
-                    <a
-                        href="{{ route('gallery') }}"
-                        class="menu-link"
-                        :class="scrolled ? 'text-black' : 'text-white'"
-                    >
-                        Gallery
-                    </a>
-
-                    <a
-                        href="{{ route('contact') }}"
-                        class="menu-link"
-                        :class="scrolled ? 'text-black' : 'text-white'"
-                    >
-                        Contact
-                    </a>
-
-                </div>
-
-
-                {{-- =================================================
-                     DESKTOP RIGHT
-                ================================================== --}}
-
-                <div class="hidden items-center gap-5 lg:flex">
-
-                    {{-- Search --}}
-                    <button
-                        type="button"
-                        aria-label="Search"
-                        :class="scrolled
-                            ? 'text-black hover:bg-gray-100'
-                            : 'text-white hover:bg-white/10'"
-                        class="rounded-full p-2.5 transition"
-                    >
-
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                        >
-
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="m21 21-4.35-4.35m1.35-5.65a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
-                            />
-
+                    <button type="button"
+                            class="sa-dropdown-toggle"
+                            aria-label="Toggle product categories"
+                            aria-expanded="false"
+                            aria-controls="saDesktopProductsDropdown"
+                            data-products-toggle>
+                        <svg viewBox="0 0 24 24"
+                             width="16" height="16"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             aria-hidden="true">
+                            <path d="m6 9 6 6 6-6"/>
                         </svg>
-
                     </button>
-
-
-                    {{-- Get Quote --}}
-                    <a
-                        href="{{ route('contact') }}"
-                        class="rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-amber-600 hover:shadow-lg"
-                    >
-                        Get Quote
-                    </a>
-
                 </div>
 
+                <div class="sa-dropdown"
+                     id="saDesktopProductsDropdown"
+                     data-products-dropdown>
 
-                {{-- =================================================
-                     MOBILE MENU BUTTON
-                ================================================== --}}
+                    <div class="sa-dropdown-heading">
+                        <span>EXPLORE OUR COLLECTION</span>
+                        <strong>Product Categories</strong>
+                    </div>
 
-                <button
-                    type="button"
-                    @click="mobileMenu = true"
-                    aria-label="Open menu"
-                    :aria-expanded="mobileMenu"
-                    :class="scrolled
-                        ? 'text-black hover:bg-gray-100'
-                        : 'text-white hover:bg-white/10'"
-                    class="rounded-lg p-2 transition lg:hidden"
-                >
+                    <a href="{{ route('products') }}"
+                       class="sa-dropdown-item sa-dropdown-all">
+                        <span class="sa-dropdown-item-icon">✦</span>
+                        <span>View All Products</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
 
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-7 w-7"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="1.8"
-                    >
+                    @forelse($navbarCategories as $category)
+                        <a href="{{ route('products.category', ['slug' => $category->slug]) }}"
+                           class="sa-dropdown-item {{ request()->is('products/category/'.$category->slug) ? 'active' : '' }}">
+                            <span class="sa-dropdown-item-icon">◇</span>
+                            <span>{{ $category->name }}</span>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    @empty
+                        <p class="sa-dropdown-empty">
+                            Categories coming soon.
+                        </p>
+                    @endforelse
 
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M4 6h16M4 12h16M4 18h16"
-                        />
-
-                    </svg>
-
-                </button>
-
+                </div>
             </div>
+
+            <a href="{{ route('gallery') }}"
+               class="{{ request()->routeIs('gallery') ? 'active' : '' }}">
+                Gallery
+            </a>
+
+            <a href="{{ route('about') }}"
+               class="{{ request()->routeIs('about') ? 'active' : '' }}">
+                About Us
+            </a>
+
+            <a href="{{ route('testimonials') }}"
+               class="{{ request()->routeIs('testimonials') ? 'active' : '' }}">
+                Testimonials
+            </a>
+
+            <a href="{{ route('contact') }}"
+               class="{{ request()->routeIs('contact') ? 'active' : '' }}">
+                Contact
+            </a>
+        </nav>
+
+        {{-- DESKTOP ACTIONS --}}
+        <div class="navbar-actions sa-navbar-actions">
+
+            {{-- SEARCH ICON --}}
+            <button type="button"
+                    class="sa-search-toggle"
+                    id="saSearchToggle"
+                    aria-label="Open product search"
+                    aria-controls="saSearchPanel"
+                    aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="21" height="21"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path d="m20 20-4-4"/>
+                </svg>
+            </button>
+
+            {{-- GET A QUOTE --}}
+            <a href="{{ route('get-a-quote') }}"
+               class="navbar-quote-btn sa-quote-btn {{ request()->routeIs('get-a-quote') ? 'active' : '' }}"
+               @if(request()->routeIs('get-a-quote')) aria-current="page" @endif>
+                Get a Quote
+                <span aria-hidden="true">↗</span>
+            </a>
 
         </div>
 
-    </nav>
+        {{-- MOBILE ACTIONS --}}
+        <div class="sa-mobile-actions">
 
-
-    {{-- =========================================================
-         MOBILE OVERLAY
-    ========================================================== --}}
-
-    <div
-        x-show="mobileMenu"
-        x-cloak
-        x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0"
-        x-transition:enter-end="opacity-100"
-        x-transition:leave="transition ease-in duration-200"
-        x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0"
-        @click="mobileMenu = false"
-        class="fixed inset-0 z-[110] bg-black/60 backdrop-blur-sm lg:hidden"
-    ></div>
-
-
-    {{-- =========================================================
-         MOBILE DRAWER
-    ========================================================== --}}
-
-    <aside
-        x-show="mobileMenu"
-        x-cloak
-
-        x-transition:enter="transform transition ease-out duration-300"
-        x-transition:enter-start="translate-x-full"
-        x-transition:enter-end="translate-x-0"
-
-        x-transition:leave="transform transition ease-in duration-250"
-        x-transition:leave-start="translate-x-0"
-        x-transition:leave-end="translate-x-full"
-
-        class="fixed right-0 top-0 z-[120] flex h-screen w-[min(86vw,360px)] flex-col bg-white shadow-2xl lg:hidden"
-    >
-
-        {{-- Drawer Header --}}
-        <div class="flex h-20 shrink-0 items-center justify-between border-b border-gray-100 px-5">
-
-            <a
-                href="{{ route('home') }}"
-                @click="mobileMenu = false"
-            >
-
-                <img
-                    src="{{ asset('images/logo.png') }}"
-                    alt="Soft Allure Décor"
-                    class="h-10 w-auto object-contain"
-                >
-
-            </a>
-
-
-            {{-- Close --}}
-            <button
-                type="button"
-                @click="mobileMenu = false"
-                aria-label="Close menu"
-                class="rounded-full p-2.5 text-gray-800 transition hover:bg-gray-100"
-            >
-
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                >
-
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6 6l12 12M18 6 6 18"
-                    />
-
+            <button type="button"
+                    class="sa-search-toggle sa-mobile-search"
+                    id="saMobileSearchToggle"
+                    aria-label="Open product search"
+                    aria-controls="saSearchPanel"
+                    aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="21" height="21"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path d="m20 20-4-4"/>
                 </svg>
+            </button>
 
+            <button class="mobile-menu-toggle sa-mobile-toggle"
+                    id="mobileMenuToggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="mobileNav"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
         </div>
+    </div>
 
+    {{-- SEARCH PANEL --}}
+    <div class="sa-search-panel"
+         id="saSearchPanel"
+         hidden>
 
-        {{-- Drawer Content --}}
-        <div class="flex flex-1 flex-col overflow-y-auto px-6 py-7">
+        <div class="sa-search-panel-inner">
+            <form action="{{ route('products') }}"
+                  method="GET"
+                  role="search"
+                  class="sa-search-form">
 
-            <nav class="flex flex-col">
+                <svg viewBox="0 0 24 24"
+                     width="20" height="20"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8"
+                     aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path d="m20 20-4-4"/>
+                </svg>
 
-                <a
-                    href="{{ route('home') }}"
-                    @click="mobileMenu = false"
-                    class="border-b border-gray-100 py-4 text-lg font-medium text-gray-900 transition hover:text-amber-500"
-                >
-                    Home
-                </a>
+                <input type="search"
+                       name="search"
+                       id="saSearchInput"
+                       placeholder="Search products..."
+                       aria-label="Search products"
+                       value="{{ request('search', '') }}"
+                       maxlength="100"
+                       required>
 
-                <a
-                    href="{{ route('about') }}"
-                    @click="mobileMenu = false"
-                    class="border-b border-gray-100 py-4 text-lg font-medium text-gray-900 transition hover:text-amber-500"
-                >
-                    About
-                </a>
+                <button type="submit"
+                        class="sa-search-submit">
+                    Search
+                </button>
+            </form>
 
-                <a
-                    href="{{ route('home') }}#products"
-                    @click="mobileMenu = false"
-                    class="border-b border-gray-100 py-4 text-lg font-medium text-gray-900 transition hover:text-amber-500"
-                >
+            <button type="button"
+                    class="sa-search-close"
+                    id="saSearchClose"
+                    aria-label="Close search">
+                &times;
+            </button>
+        </div>
+
+    </div>
+</header>
+
+{{-- MOBILE OVERLAY --}}
+<div class="mobile-menu-overlay"
+     id="mobileMenuOverlay"></div>
+
+{{-- MOBILE NAVIGATION --}}
+<aside class="mobile-nav sa-mobile-nav"
+       id="mobileNav"
+       aria-label="Mobile navigation"
+       aria-hidden="true">
+
+    <div class="mobile-nav-header">
+        <div class="mobile-nav-brand">
+            Soft Allure
+            <small>DÉCOR</small>
+        </div>
+
+        <button class="mobile-menu-close"
+                id="mobileMenuClose"
+                type="button"
+                aria-label="Close navigation menu">
+            &times;
+        </button>
+    </div>
+
+    <nav class="mobile-nav-links sa-mobile-links"
+         aria-label="Mobile links">
+
+        <a href="{{ route('home') }}"
+           class="{{ request()->routeIs('home') ? 'active' : '' }}">
+            Home
+        </a>
+
+        {{-- MOBILE PRODUCTS ACCORDION --}}
+        <div class="sa-mobile-products">
+
+            <div class="sa-mobile-products-heading">
+                <a href="{{ route('products') }}"
+                   class="{{ request()->routeIs('products*') ? 'active' : '' }}">
                     Products
                 </a>
 
-                <a
-                    href="{{ route('gallery') }}"
-                    @click="mobileMenu = false"
-                    class="border-b border-gray-100 py-4 text-lg font-medium text-gray-900 transition hover:text-amber-500"
-                >
-                    Gallery
-                </a>
-
-                <a
-                    href="{{ route('contact') }}"
-                    @click="mobileMenu = false"
-                    class="border-b border-gray-100 py-4 text-lg font-medium text-gray-900 transition hover:text-amber-500"
-                >
-                    Contact
-                </a>
-
-            </nav>
-
-
-            {{-- Contact Details --}}
-            <div class="mt-8 space-y-4">
-
-                <a
-                    href="tel:+919311036306"
-                    class="flex items-center gap-3 text-sm text-gray-600 transition hover:text-amber-500"
-                >
-
-                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-amber-50 text-amber-500">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.09l-4.423-1.106a1.125 1.125 0 0 0-1.173.417l-.97 1.293a1.125 1.125 0 0 1-1.21.38 12.035 12.035 0 0 1-7.49-7.49 1.125 1.125 0 0 1 .38-1.21l1.293-.97c.373-.28.54-.762.417-1.173L6.617 2.852A1.125 1.125 0 0 0 5.527 2H4.5A2.25 2.25 0 0 0 2.25 4.25v2.5Z"
-                            />
-                        </svg>
-                    </span>
-
-                    +91 9311036306
-
-                </a>
-
-
-                <a
-                    href="mailto:softallure.decor@gmail.com"
-                    class="flex items-center gap-3 text-sm text-gray-600 transition hover:text-amber-500"
-                >
-
-                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-amber-50 text-amber-500">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M3 7.5 12 13l9-5.5M4.5 19.5h15A1.5 1.5 0 0 0 21 18V6a1.5 1.5 0 0 0-1.5-1.5h-15A1.5 1.5 0 0 0 3 6v12a1.5 1.5 0 0 0 1.5 1.5Z"
-                            />
-                        </svg>
-                    </span>
-
-                    <span class="break-all">
-                        softallure.decor@gmail.com
-                    </span>
-
-                </a>
-
+                <button type="button"
+                        class="sa-mobile-products-toggle"
+                        id="saMobileProductsToggle"
+                        aria-label="Show product categories"
+                        aria-controls="saMobileProductsCategories"
+                        aria-expanded="false">
+                    <svg viewBox="0 0 24 24"
+                         width="18" height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         aria-hidden="true">
+                        <path d="m6 9 6 6 6-6"/>
+                    </svg>
+                </button>
             </div>
 
+            <div class="sa-mobile-categories"
+                 id="saMobileProductsCategories"
+                 hidden>
 
-            {{-- Mobile CTA --}}
-            <div class="mt-auto pt-8">
-
-                <a
-                    href="{{ route('contact') }}"
-                    @click="mobileMenu = false"
-                    class="block w-full rounded-full bg-amber-500 px-6 py-4 text-center font-semibold text-white transition hover:bg-amber-600"
-                >
-                    Get Quote
+                <a href="{{ route('products') }}">
+                    View All Products
                 </a>
 
+                @foreach($navbarCategories as $category)
+                    <a href="{{ route('products.category', ['slug' => $category->slug]) }}"
+                       class="{{ request()->is('products/category/'.$category->slug) ? 'active' : '' }}">
+                        {{ $category->name }}
+                    </a>
+                @endforeach
             </div>
-
         </div>
 
-    </aside>
+        <a href="{{ route('gallery') }}"
+           class="{{ request()->routeIs('gallery') ? 'active' : '' }}">
+            Gallery
+        </a>
 
-</header>
+        <a href="{{ route('about') }}"
+           class="{{ request()->routeIs('about') ? 'active' : '' }}">
+            About Us
+        </a>
+
+        <a href="{{ route('testimonials') }}"
+           class="{{ request()->routeIs('testimonials') ? 'active' : '' }}">
+            Testimonials
+        </a>
+
+        <a href="{{ route('contact') }}"
+           class="{{ request()->routeIs('contact') ? 'active' : '' }}">
+            Contact
+        </a>
+
+    </nav>
+
+    <div class="mobile-nav-bottom">
+
+        <a href="tel:+919311036306">
+            +91 9311036306
+        </a>
+
+        <a href="mailto:softallure.decor@gmail.com">
+            softallure.decor@gmail.com
+        </a>
+
+        <a href="{{ route('get-a-quote') }}"
+           class="mobile-quote-btn {{ request()->routeIs('get-a-quote') ? 'active' : '' }}"
+           @if(request()->routeIs('get-a-quote')) aria-current="page" @endif>
+            Get a Quote →
+        </a>
+
+    </div>
+</aside>

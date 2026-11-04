@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends Model
 {
@@ -14,7 +15,16 @@ class Category extends Model
         'status',
     ];
 
-    public function products()
+    protected $casts = [
+        'status' => 'boolean',
+    ];
+
+    /*
+    |--------------------------------------------------------------------------
+    | CATEGORY PRODUCTS
+    |--------------------------------------------------------------------------
+    */
+    public function products(): HasMany
     {
         return $this->hasMany(Product::class);
     }

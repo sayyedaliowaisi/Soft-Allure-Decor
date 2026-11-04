@@ -1,0 +1,242 @@
+/* SOFT ALLURE - MULTI PRODUCT ENQUIRY */
+
+.sa-enquiry-section {
+    margin: 0 0 38px;
+    padding: 28px;
+    background: #fcfaf7;
+    border: 1px solid #e9dfd2;
+    border-radius: 16px;
+}
+
+.sa-enquiry-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 23px;
+}
+
+.sa-enquiry-eyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: #a77b45;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.sa-enquiry-heading h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 8px;
+    color: #222;
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 3vw, 29px);
+    font-weight: 400;
+}
+
+.sa-enquiry-heading h3 span {
+    display: inline-grid;
+    place-items: center;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 7px;
+    border-radius: 50%;
+    background: #b68b56;
+    color: white;
+    font: 600 12px Arial, sans-serif;
+}
+
+.sa-enquiry-heading p,
+.sa-enquiry-empty span {
+    margin: 0;
+    color: #82766b;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.sa-enquiry-browse {
+    padding: 11px 17px;
+    border: 1px solid #bd945e;
+    border-radius: 30px;
+    color: #93662f;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sa-enquiry-items {
+    display: grid;
+    gap: 12px;
+}
+
+.sa-enquiry-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid #ede3d8;
+    border-radius: 12px;
+    background: white;
+}
+
+.sa-enquiry-item-info {
+    display: grid;
+    gap: 7px;
+    min-width: 0;
+}
+
+.sa-enquiry-item-info strong {
+    color: #242424;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.sa-enquiry-item-info span {
+    color: #94877b;
+    font-size: 11px;
+}
+
+.sa-enquiry-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.sa-enquiry-qty {
+    display: flex;
+    align-items: center;
+    height: 39px;
+    border: 1px solid #e3d7c8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sa-enquiry-qty button {
+    width: 35px;
+    height: 100%;
+    border: 0;
+    background: #f9f5ef;
+    color: #333;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.sa-enquiry-qty input {
+    width: 56px;
+    height: 100%;
+    border: 0;
+    outline: none;
+    text-align: center;
+    font-size: 13px;
+    -moz-appearance: textfield;
+}
+
+.sa-enquiry-qty input::-webkit-inner-spin-button,
+.sa-enquiry-qty input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.sa-enquiry-remove {
+    padding: 8px 0;
+    border: 0;
+    background: transparent;
+    color: #a44343;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.sa-enquiry-empty {
+    padding: 25px;
+    border: 1px dashed #d8c6b1;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sa-enquiry-empty[hidden],
+.sa-enquiry-summary[hidden] {
+    display: none;
+}
+
+.sa-enquiry-empty p {
+    margin: 0 0 6px;
+    color: #40362c;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.sa-enquiry-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid #e9dfd2;
+    color: #5e5246;
+    font-size: 13px;
+}
+
+.sa-enquiry-summary strong {
+    color: #a4753a;
+}
+
+.sa-enquiry-error {
+    display: block;
+    margin-top: 10px;
+    color: #b91c1c;
+}
+
+/* NAVBAR ENQUIRY LINK */
+
+.navbar-enquiry-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.navbar-enquiry-count {
+    display: inline-grid;
+    place-items: center;
+    min-width: 21px;
+    height: 21px;
+    padding: 0 5px;
+    border-radius: 50%;
+    background: #b68b56;
+    color: white;
+    font-size: 11px;
+}
+
+.navbar-enquiry-count[hidden] {
+    display: none;
+}
+
+.mobile-enquiry-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+@media (max-width: 600px) {
+    .sa-enquiry-section {
+        padding: 18px;
+    }
+
+    .sa-enquiry-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .sa-enquiry-item-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

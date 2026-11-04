@@ -1,0 +1,247 @@
+
+/* =====================================================
+   SOFT ALLURE DECOR - ADMIN TESTIMONIALS
+===================================================== */
+
+.admin-testimonials {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 28px;
+    font-family: 'DM Sans', sans-serif;
+    color: #24211e;
+}
+
+.admin-testimonials-heading {
+    margin-bottom: 25px;
+}
+
+.admin-testimonials-heading h1 {
+    margin: 0 0 7px;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.admin-testimonials-heading p {
+    margin: 0;
+    color: #77716b;
+    font-size: 13px;
+}
+
+/* Statistics */
+
+.admin-testimonials-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.admin-stat-card {
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #eae2d7;
+}
+
+.admin-stat-card span {
+    display: block;
+    margin-bottom: 10px;
+    color: #77716b;
+    font-size: 12px;
+}
+
+.admin-stat-card strong {
+    font-size: 28px;
+    color: #b58a49;
+}
+
+/* Alert */
+
+.admin-testimonials-alert {
+    padding: 13px 16px;
+    margin-bottom: 20px;
+    background: #eaf7ee;
+    color: #27633c;
+    border: 1px solid #c5e6cf;
+    font-size: 13px;
+}
+
+/* Filters */
+
+.admin-testimonials-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.admin-testimonials-filters input,
+.admin-testimonials-filters select {
+    min-height: 43px;
+    padding: 10px 13px;
+    border: 1px solid #e3dcd3;
+    background: #ffffff;
+    font-size: 12px;
+}
+
+.admin-testimonials-filters input {
+    flex: 1;
+    min-width: 180px;
+}
+
+.admin-testimonials-filters button {
+    padding: 10px 22px;
+    background: #b58a49;
+    border: 0;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.admin-testimonials-filters a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #77716b;
+    text-decoration: none;
+}
+
+/* Table */
+
+.admin-testimonials-table-wrap {
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #eae2d7;
+}
+
+.admin-testimonials-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-testimonials-table th {
+    padding: 16px;
+    background: #faf8f4;
+    color: #5c554d;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.admin-testimonials-table td {
+    padding: 16px;
+    border-top: 1px solid #eee7dd;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.admin-testimonials-table td strong,
+.admin-testimonials-table td small {
+    display: block;
+}
+
+.admin-testimonials-table td small {
+    margin-top: 5px;
+    color: #8a837c;
+}
+
+.admin-review-stars {
+    color: #b58a49;
+    letter-spacing: 2px;
+}
+
+.admin-review-message {
+    max-width: 300px;
+    min-width: 180px;
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+}
+
+/* Status */
+
+.admin-review-status {
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.admin-review-status.approved {
+    background: #e9f7ee;
+    color: #287345;
+}
+
+.admin-review-status.pending {
+    background: #fff5df;
+    color: #986b17;
+}
+
+/* Actions */
+
+.admin-review-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.admin-review-actions button {
+    padding: 8px 11px;
+    border: 0;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.admin-action-approve {
+    background: #e9f7ee;
+    color: #287345;
+}
+
+.admin-action-pending {
+    background: #fff5df;
+    color: #986b17;
+}
+
+.admin-action-delete {
+    background: #fff0ef;
+    color: #b54747;
+}
+
+.admin-no-reviews {
+    padding: 35px !important;
+    text-align: center;
+    color: #77716b;
+}
+
+.admin-testimonials-pagination {
+    margin-top: 22px;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .admin-testimonials {
+        padding: 18px 14px;
+    }
+
+    .admin-testimonials-heading h1 {
+        font-size: 23px;
+    }
+
+    .admin-testimonials-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .admin-stat-card {
+        padding: 17px;
+    }
+
+    .admin-testimonials-filters {
+        flex-direction: column;
+    }
+
+    .admin-testimonials-filters input,
+    .admin-testimonials-filters select,
+    .admin-testimonials-filters button {
+        width: 100%;
+    }
+}
